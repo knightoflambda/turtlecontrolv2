@@ -54,7 +54,6 @@ class Server:
         while run:
             cmsg = conn.recv(1024)
             char = int(cmsg.decode())
-            print("char: " + str(char))
             if char == 119:
                 self.turt.forward(self.speed)
             elif char == 115:
@@ -85,7 +84,8 @@ class Server:
                 if i > len(self.colors) - 1:
                     i = 0
                 self.turt.color(self.colors[i])
-            
+        
+        print("[Server closing]")
         self.sock.close()
         self.screen.bye()
 

@@ -10,7 +10,8 @@ class Client:
     def start_connection(self):
         self.sock.connect((self.hostname, self.port))
         print("[Client has successfully connected to " + self.hostname + "]")
-        while True:
+        run = True
+        while run:
             keycode = ord(msvcrt.getch())
             if keycode == 119 or keycode == 115 or keycode == 97 or keycode == 100:
                 self.sock.send(str(keycode).encode())
@@ -20,6 +21,8 @@ class Client:
             elif keycode == 27:
                 self.sock.send(str(keycode).encode())
                 self.sock.close()
+                print("[Client closing]")
+                run = False
 
 c = Client()
 c.start_connection()
