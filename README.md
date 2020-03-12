@@ -6,7 +6,7 @@ Controlling Python's turtle using msvcrt and network programming
 * **Katherine Mega Lopez**
 
 ## How to Setup
-On a Windows laptop, open the command prompt and type **ipconfig** look for the field **Wireless LAN adapter Wi-Fi**, under it should be the IPv4 Address you will use for the **localhost** variable in both *turtleserver.py* and *turtleclient.py*.
+On a Windows laptop, open the command prompt and type **ipconfig** look for the field **Wireless LAN adapter Wi-Fi**, under it should be the IPv4 Address you will use for the **localhost** variable in both *server.py* and *client.py*.
 
 ## Getting Started
 The application is about controlling a turtle using the console on a network in object-oriented code.
